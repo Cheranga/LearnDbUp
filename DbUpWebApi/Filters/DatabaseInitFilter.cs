@@ -32,7 +32,7 @@ namespace DbUpWebApi.Filters
             var dbUpgradeEngine = dbUpgradeEngineBuilder.Build();
             if (dbUpgradeEngine.IsUpgradeRequired())
             {
-                Console.WriteLine("Upgrades have been detected. Upgrading database now...");
+                _logger.WriteInformation("Upgrades have been detected. Upgrading database now...");
                 var operation = dbUpgradeEngine.PerformUpgrade();
                 if (operation.Successful)
                 {
