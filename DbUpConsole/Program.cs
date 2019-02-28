@@ -27,7 +27,7 @@ namespace DbUpConsole
             var dbUpgradeEngine = dbUpgradeEngineBuilder.Build();
             if (dbUpgradeEngine.IsUpgradeRequired())
             {
-                Console.WriteLine("Upgrades have been detecred. Upgrading database now...");
+                Console.WriteLine("Upgrades have been detected. Upgrading database now...");
                 var operation = dbUpgradeEngine.PerformUpgrade();
                 if (operation.Successful)
                 {
